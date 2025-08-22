@@ -1,0 +1,32 @@
+# =========================================
+# APP GENERAL
+# =========================================
+server.port=8081
+spring.application.name=calculo-productividad
+
+# =========================================
+# ODOO DB (PostgreSQL) - JPA
+# =========================================
+spring.datasource.url=jdbc:postgresql://localhost:5432/${PG_DB}
+spring.datasource.username=${PG_USER}
+spring.datasource.password=${PG_PASSWORD}
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+spring.jpa.hibernate.ddl-auto=none
+spring.jpa.show-sql=${JPA_SHOW_SQL:true}
+spring.jpa.properties.hibernate.format_sql=${JPA_FORMAT_SQL:true}
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+
+# =========================================
+# ALEPHOO DB (MySQL) - JDBC
+# =========================================
+alephoo.datasource.jdbc-url=jdbc:mysql://${ALEPHOO_HOST:localhost}:${ALEPHOO_PORT:3306}/${ALEPHOO_DB}?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+alephoo.datasource.username=${ALEPHOO_USER}
+alephoo.datasource.password=${ALEPHOO_PASSWORD}
+alephoo.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+# =========================================
+# LOGGING
+# =========================================
+logging.level.org.springframework.boot.autoconfigure.jdbc=${JDBC_AUTOLOG:DEBUG}
+logging.level.com.zaxxer.hikari=${HIKARI_LOG:INFO}

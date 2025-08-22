@@ -1,0 +1,29 @@
+# Build
+/target/
+out/
+bin/
+
+# IDE
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+
+# SO
+.DS_Store
+Thumbs.db
+
+# Logs / temp
+*.log
+*.tmp
+hs_err_pid*
+replay_pid*
+*.swp
+
+# Configs locales y secretos
+.env
+.env.*
+src/main/resources/application.properties
+application-local.properties
+application-*.secret.properties
