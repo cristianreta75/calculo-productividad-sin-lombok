@@ -25,6 +25,9 @@ public class ProductividadController {
         List<Integer> empleados = empleadoId == null ? Collections.emptyList() : List.of(empleadoId);
         productividadService.generarProductividadMensual(mes, anio, limiteEmpleados, empleados);
         return ResponseEntity.ok().build();
+        /*List<Integer> empleados = empleadoId == null ? Collections.emptyList() : List.of(empleadoId);
+        var resultado = productividadService.generarProductividadMensual(mes, anio, limiteEmpleados, empleados);
+        return ResponseEntity.ok(resultado);*/
     }
 
     @PostMapping("/recalcular-detalle/{id}")
@@ -32,4 +35,5 @@ public class ProductividadController {
         productividadService.recalcularDetalle(id);
         return ResponseEntity.ok().build();
     }
+    
 }
